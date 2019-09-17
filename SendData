@@ -11,7 +11,7 @@ public class dataSend : MonoBehaviour {
 	void Start () {
 
 		arduino = new SerialPort ("/dev/tty.usbmodem1411", 9600);
-        arduino.Open();
+        	arduino.Open();
 
 		cube1 = GameObject.Find("Cube").GetComponent<ArduinoTest>();
 		cube2 = GameObject.Find("Cube (1)").GetComponent<ArduinoTest2>();
