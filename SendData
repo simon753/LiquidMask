@@ -6,15 +6,15 @@ using System.IO.Ports;
 public class dataSend : MonoBehaviour {
 	private ArduinoTest cube1;
 	private ArduinoTest2 cube2;
-    SerialPort arduino;
+    	SerialPort arduino;
 	// Use this for initialization
 	void Start () {
 
-		arduino = new SerialPort ("/dev/tty.usbmodem1411", 9600);
-        	arduino.Open();
+	    arduino = new SerialPort ("/dev/tty.usbmodem1411", 9600);
+            arduino.Open();
 
-		cube1 = GameObject.Find("Cube").GetComponent<ArduinoTest>();
-		cube2 = GameObject.Find("Cube (1)").GetComponent<ArduinoTest2>();
+	    cube1 = GameObject.Find("Cube").GetComponent<ArduinoTest>();
+	    cube2 = GameObject.Find("Cube (1)").GetComponent<ArduinoTest2>();
 
 	}
 	
@@ -26,7 +26,7 @@ public class dataSend : MonoBehaviour {
                 arduino.Write("1");
                 Debug.Log("Sending 1");
             }
-			else if (cube2.getCube() == true) {
+	    else if (cube2.getCube() == true) {
                 arduino.Write("2");
                 Debug.Log("Sending 2");
             }
